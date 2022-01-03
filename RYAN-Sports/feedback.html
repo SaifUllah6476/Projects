@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="eng">
+<head>
+<meta charset="utf-8">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<!-- Font-Awesome -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit-no">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/style-fb.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+<title>Feedback</title>
+</head>
+               
+
+<body>
+<!-- Start Header -->
+
+<div id="header">
+	<div class="container">
+    	<div class="row">
+        	<div class="col-md-4"><a id="logo" href="index.html"><img src="Images/Rayan-Logo.png"/></a></div>
+            <div class=" col-sm-4 col-md-8"> 
+            <ul id="menu" >
+            	<li><a href="index.html">Home</a></li>
+                <li class="dropdown" ><a href="index.html" class="dropdown-toggle" data-toggle="dropdown">Sports</a>
+                <div class="dropdown-menu">
+            		<a href="indoor.html" class="dropdown-item">Indoor Sports</a>
+            		<a href="outdoor.html" class="dropdown-item">Outdoof Sports</a>
+                    <a href="recreation.html" class="dropdown-item">Recreation</a>
+       			</div>           
+                </li>                
+                <li id="contact"><a href="contact.html">Contact Us</a></li>
+                <li><a href="membership.html"><span class="glyphicon glyphicon-user"></span> Membership</a></li>
+                            
+            </ul>
+            </div>                    
+        </div>
+    </div>   
+</div>
+<!-- End Header -->
+
+
+<div class="clear"></div>
+<!-- Start Banner -->
+
+<div id="banner" class="py-5">
+	<div class="container">
+    	<div class="row">
+        	<div class="col-lg-12">
+            	<div class="banner-title">
+                	<p class="lead">Ryan Sport Club is a group of students organized and established to promote and develop the interests and skills of members in sport related activities.</p>
+                    
+            
+            </div>
+		</div>
+	</div>
+</div>
+<!-- End Banner -->
+<div class="clear"></div>
+
+<!-- Start Feedback -->
+
+
+<div class="container">
+<h3>Ryan Sports Club Survey Form</h3>
+<h6>We would appreciate you taking the time to give us some <br> feedback on what upgrades you would like <br> to see at the Sports Club facility.</h6>
+
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="dropdown">How often have you eaten at the Sports club facility?</label>
+      </div>
+      <div class="col-75">
+        <select id="dropdown" name="dropdown">
+          <option value="Daily">Daily</option>
+          	<option value="week">One time per week</option>
+         	<option value="two-weeks">Once every two weeks</option>
+          	<option value="per-month">One time per month</option>
+          	<option value="six-months">Once every six months</option>
+          	<option value="never">Never</option> 
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="dropdown">How would you rate the value of food to the price?</label>
+      </div>
+      <div class="col-75">
+        <select id="dropdown" name="dropdown">
+          <option value="Daily">Average</option>
+          	<option value="week">Too high for quantity / quality</option>
+         	<option value="two-weeks">Feel like your getting a bargain</option>
+          </select>
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-25">
+        <label for="dropdown">How long are you willing to wait for food?</label>
+      </div>
+      <div class="col-75">
+        <select id="dropdown" name="dropdown">
+          <option value="Daily">15 minutes</option>
+          	<option value="week">30 minutes</option>
+         	<option value="two-weeks">45 minutes</option>
+            <option value="two-weeks">1 hour</option>
+          </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="dropdown">Will you be more likely to visit the facility once the new management takes over?</label>
+      </div>
+      <div class="col-75">
+        <select id="dropdown" name="dropdown">
+          <option value="Daily">More likely</option>
+          	<option value="week">Less likely</option>
+         	<option value="two-weeks">About the same</option>
+          </select>
+      </div>
+    </div>    
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">What do you currently think about the Sports club facility?</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="" style="height:100px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">What do you think of the food selection currently offered by the Sports club facility?</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="" style="height:100px"></textarea>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-25">
+        <label for="subject">If you could add to the menu what particular food items would you like to see on the menu?</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="" style="height:100px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">What other suggestions would you have for a European style Pub?</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="" style="height:100px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">We are looking for a new name for the facility,any suggestions?</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="" style="height:100px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Any other special comments</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="" style="height:100px"></textarea>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-25">
+        	<label for="subject">Which is more important for this new sports facility, the drink selection or food selection?</label>
+      </div>
+      	<div class="col-75">
+      		<div class="checkbox">
+    		<label><input type="checkbox"> Drink / Beer</label>
+            <label><input type="checkbox"> Food</label>
+            <label><input type="checkbox"> Both</label>
+  			</div>       
+      	</div>
+    </div>    
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+<br><br><br>
+<!-- End feedback -->
+
+
+<div class="clear"></div>
+           
+<!-- Start Footer -->
+       
+<div class="mt-5 pt-5 pb-5 footer">
+	<div class="container">
+  		<div class="row">
+    		<div class="col-lg-5 col-xs-12 about-company">
+      			<h2>Ryan Sports Club</h2>
+      				<p class="pr-5 text-white-50">Ryan Sport Club is a group of students organized and <br> established to promote and develop the interests and <br>skills of members in sport related activities.</p>
+      				<p><a href="https://vimeo.com/"><i class="fa fa-vimeo"></i></a> <a href="https://www.whatsapp.com/"><i class="fa fa-whatsapp"></i></a> <a href="https://www.facebook.com/"><i class="fa fa-facebook-f"></i></a> <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></p>     		</div>
+    		<div class="col-lg-3 col-xs-12 links">
+      			<h2 class="mt-lg-0 mt-sm-3">Links</h2>
+        			<ul class="m-0 p-0">
+          				<li>- <a href="indoor.html">Indoor Sports</a></li>
+          				<li>- <a href="outdoor.html">Outdoor Sports</a></li>
+         				<li>- <a href="recreation.html">Recreation</a></li>
+          				<li>- <a href="definition.html">Definition of a Sport Club</a></li>
+          				<li>- <a href="list of activities.html">List of Activities</a></li>
+          				<li>- <a href="complaint.html">Suggestion and complaints</a></li>
+          				<li>- <a href="feedback.html">Feedback</a></li>
+          				<li>- <a href="membership.html">Membership</a></li>  
+                        <li>- <a href="gallery.html">Picture Gallery</a></li>   
+          				<li>- <a href="contact.html">Contact Us</a></li>   
+        			</ul>
+   			</div>
+    		<div class="col-lg-4 col-xs-12 location">
+      			<h2 class="mt-lg-0 mt-sm-4">Location</h2>
+      				<p>Ryan Sports Club</p>
+      				<p class="mb-0"><i class="fa fa-phone mr-4"></i> (021) 36965916</p>
+      				<p><i class="fa fa-envelope-o mr-3"></i> info@ryansportsclub.com</p>
+    		</div>
+  			</div>
+  		<div class="row mt-5">
+    			<div class="col copyright">
+    		<p class=""><small class="text-white-50">© 2021 Ryan Sports Club. All Rights Reserved.</small></p>
+    		</div>
+ 		</div>
+	</div>
+</div>
+<!-- End Footer -->
+</body>
+</html>

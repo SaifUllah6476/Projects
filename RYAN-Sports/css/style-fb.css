@@ -1,0 +1,157 @@
+a:hover{text-decoration: none;
+	}
+
+
+/*  Header */
+
+#header{color:#FFFFFF;
+	height:104px;
+	background-color:#006600;	
+	}
+	
+	
+/*  Logo */
+
+#logo img{margin-top:10px;
+	width:45%;
+	}	
+	
+	
+/* Navbar/Menu */
+
+#menu{float:right;
+	font-weight:700;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-size:16px;
+	}
+
+#contact {margin-right:100px;
+	}
+
+#menu li{display: inline-block;
+	margin-top:50px;
+	}
+
+#menu li a{color: #FFFFFF;
+	padding: 15px 15px;
+	display:block;
+	}
+
+#menu li a:hover{background-color:#044F17;	
+	border-bottom-left-radius:15px;
+	border-top-right-radius: 15px;	
+	}
+	
+.dropdown-menu{background-color:#006600;
+	}
+	
+	
+/* Banner */
+
+#banner{background-image:url(../Images/Banner-1.jpg);
+	background-repeat:no-repeat;
+	background-size: cover;	
+	height:600px;
+	}
+
+.banner-title p.lead{color:#FFFFFF;
+	font-weight:600;
+	font-size:35px;
+	margin-left:500px;
+	margin-top:200px;
+	margin-bottom:200px;
+	}
+	
+/* Feedback */
+input[type=text], select, textarea {width: 90%;
+ 	padding: 12px;
+  	border: 1px solid #ccc;
+ 	border-radius: 4px;
+  	resize: vertical;
+	margin-left:20px;
+	}
+
+label {padding: 12px 12px 12px 0;
+	display: inline-block;
+	color:#006600;
+	margin-left:50px;
+	}
+
+input[type=submit] {background-color: #006600;
+  	color: white;
+  	border: none;
+  	border-radius: 4px;
+  	cursor: pointer;
+	font-weight: 600;
+	width: 13%;
+	padding:10px 0;
+	margin-left:315px;
+	}
+
+input[type=submit]:hover {background-color: #044F17;
+	}
+
+.col-25 {float: left;
+  	width: 25%;
+  	margin-top: 6px;
+	}
+
+.col-75 {float: left;
+  	width: 75%;
+  	margin-top: 6px;
+	}
+
+.row:after {content: "";
+  	display: table;
+  	clear: both;
+	}
+
+.container h3 {color:#006600;
+	text-align:center;	
+	font-weight:600;
+	font-size:50px;
+	}
+.container h6 {text-align:center;	
+	font-weight:600;
+	font-size:20px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	}
+
+
+/* Footer */
+
+.footer{background: #006600;
+  	color:white;
+	}
+  
+.links ul {list-style-type: none;
+	text-decoration:none;
+	color:white;
+	margin-left:-35px;
+	}
+
+li a{color: white;
+	transition: color .3s;
+	margin-left:10px;
+	}
+    
+&:hover{text-decoration:none;
+	color:green;
+    }
+   
+.about-company i{font-size: 25px;
+	margin-right:10px; 
+	color:#FFFFFF;	
+	}
+    
+.location i{font-size: 18px;
+	}
+
+.copyright p{border-top:1px solid rgba(255,255,255,.1);
+	} 
+	
+.location {padding-left:100px;
+	}

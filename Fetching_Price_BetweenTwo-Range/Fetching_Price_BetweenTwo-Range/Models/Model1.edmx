@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="fetching_records_with_priceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_product">
+          <Key>
+            <PropertyRef Name="pro_id" />
+          </Key>
+          <Property Name="pro_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Pro_Company" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Pro_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Pro_Descripton" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Pro_Price" Type="int" />
+        </EntityType>
+        <Function Name="pro_details" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="start" Type="int" Mode="In" />
+          <Parameter Name="end" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="fetching_records_with_priceModelStoreContainer">
+          <EntitySet Name="tbl_product" EntityType="Self.tbl_product" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="fetching_records_with_priceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_product">
+          <Key>
+            <PropertyRef Name="pro_id" />
+          </Key>
+          <Property Name="pro_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Pro_Company" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Pro_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Pro_Descripton" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Pro_Price" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="fetching_records_with_priceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_product" EntityType="Self.tbl_product" />
+          <FunctionImport Name="pro_details" ReturnType="Collection(fetching_records_with_priceModel.pro_details_Result)">
+            <Parameter Name="start" Mode="In" Type="Int32" />
+            <Parameter Name="end" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetFunctionPro" EntitySet="tbl_product" ReturnType="Collection(fetching_records_with_priceModel.tbl_product)">
+            <Parameter Name="start" Mode="In" Type="Int32" />
+            <Parameter Name="end" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="pro_details_Result">
+          <Property Type="Int32" Name="pro_id" Nullable="false" />
+          <Property Type="String" Name="Pro_Company" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Pro_Name" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Pro_Descripton" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Pro_Price" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="fetching_records_with_priceModelStoreContainer" CdmEntityContainer="fetching_records_with_priceEntities">
+          <EntitySetMapping Name="tbl_product">
+            <EntityTypeMapping TypeName="fetching_records_with_priceModel.tbl_product">
+              <MappingFragment StoreEntitySet="tbl_product">
+                <ScalarProperty Name="pro_id" ColumnName="pro_id" />
+                <ScalarProperty Name="Pro_Company" ColumnName="Pro_Company" />
+                <ScalarProperty Name="Pro_Name" ColumnName="Pro_Name" />
+                <ScalarProperty Name="Pro_Descripton" ColumnName="Pro_Descripton" />
+                <ScalarProperty Name="Pro_Price" ColumnName="Pro_Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="pro_details" FunctionName="fetching_records_with_priceModel.Store.pro_details">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="fetching_records_with_priceModel.pro_details_Result">
+                <ScalarProperty Name="pro_id" ColumnName="pro_id" />
+                <ScalarProperty Name="Pro_Company" ColumnName="Pro_Company" />
+                <ScalarProperty Name="Pro_Name" ColumnName="Pro_Name" />
+                <ScalarProperty Name="Pro_Descripton" ColumnName="Pro_Descripton" />
+                <ScalarProperty Name="Pro_Price" ColumnName="Pro_Price" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetFunctionPro" FunctionName="fetching_records_with_priceModel.Store.pro_details" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="fetching_records_with_priceModelStoreContainer" CdmEntityContainer="fetching_records_with_priceEntities">
+    <EntitySetMapping Name="tbl_product">
+      <EntityTypeMapping TypeName="fetching_records_with_priceModel.tbl_product">
+        <MappingFragment StoreEntitySet="tbl_product">
+          <ScalarProperty Name="pro_id" ColumnName="pro_id" />
+          <ScalarProperty Name="Pro_Company" ColumnName="Pro_Company" />
+          <ScalarProperty Name="Pro_Name" ColumnName="Pro_Name" />
+          <ScalarProperty Name="Pro_Descripton" ColumnName="Pro_Descripton" />
+          <ScalarProperty Name="Pro_Price" ColumnName="Pro_Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="pro_details" FunctionName="fetching_records_with_priceModel.Store.pro_details">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="fetching_records_with_priceModel.pro_details_Result">
+          <ScalarProperty Name="pro_id" ColumnName="pro_id" />
+          <ScalarProperty Name="Pro_Company" ColumnName="Pro_Company" />
+          <ScalarProperty Name="Pro_Name" ColumnName="Pro_Name" />
+          <ScalarProperty Name="Pro_Descripton" ColumnName="Pro_Descripton" />
+          <ScalarProperty Name="Pro_Price" ColumnName="Pro_Price" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetFunctionPro" FunctionName="fetching_records_with_priceModel.Store.pro_details" />
+  </EntityContainerMapping>
+</Mapping>
